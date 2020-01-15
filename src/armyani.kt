@@ -5,7 +5,7 @@ class Mat{
     var rexY: Int = 1080
     fun changex() {
             var firstU = readLine()!!.toFloat()
-            if (firstU < 1080 && firstU > 0) {
+            if (firstU < resX) {
                 first = firstU
             }
             else {
@@ -15,7 +15,7 @@ class Mat{
 
     fun changey() {
             var secondU = readLine()!!.toFloat()
-            if (secondU < 1080 && secondU > 0) {
+            if (secondU < rexY) {
                 second = secondU
             }
             else {
