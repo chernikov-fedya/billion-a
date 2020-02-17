@@ -14,7 +14,7 @@ class Group(){
     var students: MutableList<Student> = mutableListOf()
     var groupname: String = ""
     init {
-        for (i in 0..5) {
+        for (i in 0..14) {
             var  s = Student()
             s.name = mnames[(0..5).random()]
             s.surname = msurname[(0..5).random()]
@@ -34,7 +34,7 @@ class Kvantorium{
 
 fun main() {
     var a = Group()
-    for (i in 0..5) {
+    for (i in 0..14) {
         println(a.students[i].name + " " + a.students[i].surname + " " + a.students[i].middlename + "   " + a.students[i].birthday)
     }
 }
