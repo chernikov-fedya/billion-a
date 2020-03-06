@@ -1,4 +1,13 @@
-open class Kachok(){
+import java.util.*
+import java.util.logging.Handler
+import java.util.Timer
+import kotlin.concurrent.fixedRateTimer
+import kotlin.concurrent.schedule
+
+
+
+
+class Kachok(){
     var IMB: Int? = null
     var goal: Int? = null   //1 - работа на силу, 2 - на массу, 3 - на выносливость
     init {
@@ -23,15 +32,22 @@ class Excercise(){
     fun havearest(){
         println("Отдохни $defaultRest секунд")
     }
+
     fun pluskg() {
         println("Была ли тренировка трудной?")
         var c: String = readLine()!!
         when (c) {
-            "y", "Y", "YES", "yes" -> return
+            "y", "Y", "YES", "yes" -> null
             else -> trainingWeight = trainingWeight + trainingWeight * 0.1
         }
+        var n: Long = 10000
+        println("Приходи через $n")
+        Thread.sleep(n)
     }
+
+
 }
+
 
 fun main(){
     var a = Kachok()
@@ -82,7 +98,7 @@ fun main(){
         }
     }
     loop@ for(k in 1..2) {  //тестовый цикл
-         for (i in 1..b.podxod!!) {
+        for (i in 1..b.podxod!!) {
             println("Сделать ${b.povtor} повторов, вес: ${b.trainingWeight}")
             b.havearest()
             b.restPlus()
@@ -92,3 +108,6 @@ fun main(){
         }
     }
 }
+
+
+
